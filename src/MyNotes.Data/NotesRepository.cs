@@ -26,9 +26,7 @@ namespace MyNotes.Data
             {
                 var statementResult = session.Run(statementTemplate);
 
-                var notes = statementResult.As<List<object>>();                
-                
-                foreach (IList<object> noteResult in notes)
+                foreach (var noteResult in statementResult)
                 {
                     var castResult = new Note
                     {
