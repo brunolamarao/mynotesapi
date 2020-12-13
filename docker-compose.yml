@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+  mynotes-database:
+    image: neo4j:latest
+    container_name: testneo4j
+    environment:
+      - "NEO4J_AUTH=neo4j/test" 
+    ports:
+      - 7474:7474
+      - 7687:7687    
+    volumes:
+      - './neo4j/data:/data'
+      - './neo4j/logs:/logs'
+      - './neo4j/import:/import'
+      - './neo4j/plugins:/plugins'
