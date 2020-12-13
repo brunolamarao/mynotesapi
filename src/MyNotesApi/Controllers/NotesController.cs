@@ -6,7 +6,7 @@ using MyNotes.Models;
 namespace MyNotesApi.Controllers
 {
     [Route("[controller]")]
-    [EnableCors("MyNodesApplication")]
+    [EnableCors("MyNotesApplication")]
     [ApiController]
     public class NotesController : Controller
     {

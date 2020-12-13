@@ -2,13 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-  </PropertyGroup>
-
- 
+  </PropertyGroup> 
 
   <ItemGroup>
     <ProjectReference Include="..\MyNotes.Models\MyNotes.Models.csproj" />
-  </ItemGroup>
+    <ProjectReference Include="..\MyNotes.Data\MyNotes.Data.csproj" />
+  </ItemGroup> 
 
+  <ItemGroup>
+    <PackageReference Include="SimpleInjector" Version="5.1.0" />
+    <PackageReference Include="SimpleInjector.Integration.AspNetCore.Mvc.Core" Version="5.0.0" />
+    <PackageReference Include="SimpleInjector.Integration.AspNetCore.Mvc.ViewFeatures" Version="5.0.0" />
+  </ItemGroup>
 
 </Project>
