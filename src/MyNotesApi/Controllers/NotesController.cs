@@ -14,8 +14,22 @@ namespace MyNotesApi.Controllers
         public IEnumerable<Note> GetNotes()
         {
             return new List<Note> {
-                new Note { Title = "First Note", Content="This is a hard-coded note on the API side."},
-                new Note { Title = "Second Note", Content="The next step is to get those notes from the database."}
+                new Note { 
+                    Title = "First Note", 
+                    Content="This is a hard-coded note on the API side.",
+                    Tags = new List<Tag> {
+                        new Tag { Name = "Introduction" },
+                        new Tag { Name = "ASP.NET Core"}
+                    }
+                },
+                new Note { 
+                    Title = "Second Note", 
+                    Content="The next step is to get those notes from the database.",
+                    Tags = new List<Tag> {
+                        new Tag { Name = "Graph Database"},
+                        new Tag { Name = "Neo4j"}
+                    }
+                }
             };
         }
     }
